@@ -316,7 +316,7 @@ export default function Home() {
             north<span className="text-emerald-700">.</span>
           </a>
           <p className="text-sm text-[#686c65]">
-            © {new Date().getFullYear()} North Studio. Replace with your company details.
+            © 2026 North Studio. All rights reserved.
           </p>
           <a href="#contact" className="text-sm font-medium hover:text-emerald-800">
             Get in touch ↗

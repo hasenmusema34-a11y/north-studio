@@ -1,326 +1,161 @@
-import ContactForm from "./ContactForm";
-const services = [
-  {
-    number: "01",
-    title: "Web Development",
-    description:
-      "Fast, responsive websites designed to help your business grow and reach more customers.",
-  },
-  {
-    number: "02",
-    title: "UI/UX Design",
-    description:
-      "Intuitive digital experiences that make your products easier and more enjoyable to use.",
-  },
-  {
-    number: "03",
-    title: "Digital Strategy",
-    description:
-      "Practical digital solutions that help you work smarter, serve customers, and grow.",
-  },
-];
 
-const projects = [
-  {
-    number: "01",
-    name: "Northstar",
-    type: "Brand & digital experience",
-    style: "bg-indigo-100 text-indigo-950",
-    symbol: "N.",
-  },
-  {
-    number: "02",
-    name: "Form & Field",
-    type: "E-commerce concept",
-    style: "bg-amber-100 text-amber-950",
-    symbol: "F.",
-  },
-  {
-    number: "03",
-    name: "Monogram",
-    type: "Business website concept",
-    style: "bg-emerald-100 text-emerald-950",
-    symbol: "M.",
-  },
+import ContactForm from "./ContactForm";
+
+const topics = [
+  { title: "YouTube", text: "Learn to plan videos, create useful content, and grow a channel with patience." },
+  { title: "Freelancing", text: "Explore digital skills, build a portfolio, and learn how to present your work." },
+  { title: "Digital products", text: "Discover guides, templates, workbooks, and other useful digital products." },
+  { title: "E-commerce", text: "Understand online stores, customers, products, and selling responsibly." },
+  { title: "AI tools", text: "Use AI to brainstorm, research, plan, and improve your creative work." },
+  { title: "Money basics", text: "Learn about budgeting, saving, risk, and realistic financial expectations." },
 ];
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#faf9f6] text-[#20251f]">
-      <header className="sticky top-0 z-50 border-b border-black/5 bg-[#faf9f6]/95 backdrop-blur">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-          <a href="#" className="text-2xl font-black tracking-tight">
-            north<span className="text-emerald-700">.</span>
-          </a>
-
-          <div className="hidden items-center gap-8 text-sm font-medium md:flex">
-            <a href="#services" className="hover:text-emerald-700">Services</a>
-            <a href="#about" className="hover:text-emerald-700">About</a>
-            <a href="#work" className="hover:text-emerald-700">Our work</a>
-            <a href="#contact" className="hover:text-emerald-700">Contact</a>
+      <header className="sticky top-0 z-50 border-b border-black/10 bg-[#faf9f6]/95">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+          <a href="#home" className="text-3xl font-black">roki<span className="text-emerald-700">.</span></a>
+          <div className="hidden gap-6 text-sm font-medium md:flex">
+            <a href="#learn">Learn</a>
+            <a href="#resources">Free resources</a>
+            <a href="#shop">Digital shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
           </div>
-
-          <a
-            href="#contact"
-            className="rounded-full bg-[#20251f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800"
-          >
-            Let&apos;s talk ↗
-          </a>
+          <a href="#learn" className="rounded-full bg-[#20251f] px-5 py-3 text-sm font-semibold text-white">Start learning ↗</a>
         </nav>
       </header>
 
-      <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:py-28 lg:grid-cols-2 lg:px-10">
+      <section id="home" className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
         <div>
-          <p className="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-800">
-            <span className="h-2 w-2 rounded-full bg-emerald-600" />
-            Independent digital studio
-          </p>
-
-          <h1 className="max-w-2xl text-5xl font-semibold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
-            Good ideas deserve
-            <span className="block text-emerald-800">great websites.</span>
-          </h1>
-
-          <p className="mt-7 max-w-lg text-lg leading-8 text-[#686c65]">
-            We help ambitious businesses build a stronger digital presence
-            through thoughtful design, modern technology, and meaningful
-            digital experiences.
-          </p>
-
-          <div className="mt-9 flex flex-wrap gap-4">
-            <a
-              href="#contact"
-              className="rounded-full bg-emerald-800 px-7 py-4 font-semibold text-white transition hover:bg-emerald-900"
-            >
-              Start a project ↗
-            </a>
-            <a
-              href="#work"
-              className="rounded-full border border-black/15 px-7 py-4 font-semibold transition hover:bg-white"
-            >
-              Explore our work
-            </a>
+          <p className="mb-5 text-sm font-bold uppercase tracking-widest text-emerald-800">Practical learning for beginners</p>
+          <h1 className="text-5xl font-semibold leading-tight sm:text-6xl">Build your skills.<span className="block text-emerald-800">Create your opportunities.</span></h1>
+          <p className="mt-6 max-w-xl text-lg leading-8 text-[#686c65]">Roki helps beginners explore online work, learn useful digital skills, and understand money decisions through clear educational content.</p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a href="#learn" className="rounded-full bg-emerald-800 px-6 py-4 font-semibold text-white">Explore learning topics ↗</a>
+            <a href="#resources" className="rounded-full border border-black/20 px-6 py-4 font-semibold">Find free resources</a>
           </div>
-
-          <div className="mt-12 flex items-center gap-4 border-t border-black/10 pt-6">
-            <div className="flex -space-x-2">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#faf9f6] bg-amber-200 text-sm">D</span>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#faf9f6] bg-emerald-200 text-sm">C</span>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#faf9f6] bg-indigo-200 text-sm">S</span>
-            </div>
-            <p className="text-sm leading-6 text-[#686c65]">
-              Thoughtful solutions.
-              <br />
-              Built around your business.
-            </p>
+          <div className="mt-10 flex items-center gap-4 border-t border-black/10 pt-6">
+            <span className="text-4xl">🚀</span>
+            <p className="text-sm leading-6 text-[#686c65]">Meet Roki, your learning companion.<br />Small steps. Useful skills. Honest guidance.</p>
           </div>
         </div>
-
-        <div className="relative mx-auto w-full max-w-xl">
-          <div className="absolute -right-3 -top-3 h-28 w-28 rounded-full bg-amber-200/80 blur-2xl" />
-          <div className="absolute -bottom-5 -left-4 h-32 w-32 rounded-full bg-emerald-200/70 blur-2xl" />
-
-          <div className="relative overflow-hidden rounded-[2rem] bg-[#e8e9df] p-6 sm:p-10">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#646b5e]">
-                Ideas into impact
-              </span>
-              <span className="text-2xl">✳</span>
-            </div>
-
-            <div className="my-10 flex min-h-64 items-center justify-center">
-              <div className="relative flex h-64 w-64 rotate-[-8deg] items-center justify-center rounded-[3rem] bg-emerald-800 shadow-2xl sm:h-72 sm:w-72">
-                <div className="absolute inset-5 rounded-[2.5rem] border border-white/30" />
-                <div className="text-center text-white">
-                  <div className="text-7xl font-black tracking-tighter">n.</div>
-                  <div className="mt-2 text-xs uppercase tracking-[0.3em]">
-                    Built with purpose
-                  </div>
-                </div>
-                <div className="absolute -right-4 top-8 flex h-16 w-16 rotate-12 items-center justify-center rounded-2xl bg-amber-300 text-3xl shadow-lg">
-                  ↗
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-end justify-between border-t border-black/10 pt-5">
-              <div>
-                <p className="text-sm font-semibold">Strategy meets creativity.</p>
-                <p className="mt-1 text-xs text-[#686c65]">Designed for what&apos;s next.</p>
-              </div>
-              <span className="text-2xl">→</span>
-            </div>
+        <div className="rounded-[2rem] bg-[#e8e9df] p-8 sm:p-12">
+          <p className="text-sm font-bold uppercase tracking-widest text-emerald-800">Your learning journey</p>
+          <div className="my-8 rounded-3xl bg-emerald-800 p-8 text-white">
+            <span className="text-7xl">🚀</span>
+            <p className="mt-5 text-xs font-bold uppercase tracking-widest text-emerald-200">Meet Roki</p>
+            <h2 className="mt-3 text-3xl font-semibold">Your next skill starts with one step.</h2>
+            <p className="mt-4 leading-7 text-white/80">Explore ideas, practice what you learn, and keep improving.</p>
           </div>
+          <p className="font-semibold">Progress over promises.</p>
+          <p className="mt-1 text-sm text-[#686c65]">Learn at your own pace.</p>
         </div>
       </section>
 
-      <section id="services" className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-800">What we do</p>
-              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-                Solutions that move you forward.
-              </h2>
-            </div>
-            <p className="max-w-md leading-7 text-[#686c65]">
-              From the first idea to the finished product, we focus on the
-              things that make a real difference.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {services.map((service) => (
-              <article
-                key={service.number}
-                className="group rounded-3xl border border-black/10 p-7 transition hover:-translate-y-1 hover:border-emerald-800/40 hover:shadow-xl"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-[#858981]">{service.number}</span>
-                  <span className="text-2xl transition group-hover:translate-x-1">↗</span>
-                </div>
-                <h3 className="mt-12 text-2xl font-semibold">{service.title}</h3>
-                <p className="mt-4 leading-7 text-[#686c65]">
-                  {service.description}
-                </p>
-                <a href="#contact" className="mt-8 inline-block text-sm font-bold text-emerald-800">
-                  Discuss your project →
-                </a>
+      <section id="learn" className="bg-white px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-emerald-800">What you can learn</p>
+          <h2 className="mt-4 max-w-2xl text-4xl font-semibold sm:text-5xl">Useful knowledge for your online journey.</h2>
+          <p className="mt-5 max-w-xl leading-7 text-[#686c65]">Choose one topic, practice it, and add more skills as you grow.</p>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {topics.map((topic, index) => (
+              <article key={topic.title} className="rounded-3xl border border-black/10 p-7 transition hover:shadow-lg">
+                <p className="text-sm text-emerald-800">0{index + 1}</p>
+                <h3 className="mt-5 text-2xl font-semibold">{topic.title}</h3>
+                <p className="mt-3 leading-7 text-[#686c65]">{topic.text}</p>
+                <a href="#resources" className="mt-6 inline-block font-semibold text-emerald-800">Explore resources →</a>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 md:items-center lg:px-10">
-          <div className="rounded-3xl bg-[#e8e9df] p-8 sm:p-12">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-800">Our philosophy</p>
-            <p className="mt-8 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              Less noise.
-              <br />
-              More meaning.
-              <br />
-              Better results.
-            </p>
-            <div className="mt-10 h-1 w-20 rounded-full bg-emerald-800" />
-          </div>
-
+      <section id="resources" className="px-6 py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-800">A little about us</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Your goals are our starting point.
-            </h2>
-            <p className="mt-6 leading-8 text-[#686c65]">
-              Every business has a different story. We take the time to
-              understand yours, then build a digital experience that reflects
-              your values and serves your customers.
-            </p>
-            <p className="mt-4 leading-8 text-[#686c65]">
-              Our approach brings clear strategy, thoughtful design, and
-              reliable technology together in one straightforward process.
-            </p>
-            <a href="#contact" className="mt-8 inline-block rounded-full bg-[#20251f] px-6 py-4 font-semibold text-white hover:bg-emerald-800">
-              Get to know us ↗
-            </a>
+            <p className="text-sm font-bold uppercase tracking-widest text-emerald-800">Free resources</p>
+            <h2 className="mt-4 text-4xl font-semibold sm:text-5xl">Learn something useful. Put it into practice.</h2>
+            <p className="mt-6 leading-8 text-[#686c65]">Beginner checklists, planning worksheets, and practical guides will be added here as they become available.</p>
+            <a href="#contact" className="mt-7 inline-block rounded-full bg-[#20251f] px-6 py-4 font-semibold text-white">Ask about resources ↗</a>
+          </div>
+          <div className="rounded-3xl bg-[#e8e9df] p-8">
+            <div className="rounded-2xl bg-white p-6">
+              <h3 className="text-2xl font-semibold">Your first learning plan</h3>
+              <ul className="mt-5 space-y-4 text-[#555b52]">
+                <li>✓ Choose one skill to explore.</li>
+                <li>✓ Set a realistic practice goal.</li>
+                <li>✓ Create a simple example of your work.</li>
+                <li>✓ Review what you can improve.</li>
+              </ul>
+              <p className="mt-5 border-t border-black/10 pt-4 text-sm text-[#686c65]">A starter checklist from Roki.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="work" className="bg-[#20251f] py-20 text-white md:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-300">Selected work</p>
-          <div className="mt-4 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-            <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">Ideas, made tangible.</h2>
-            <p className="max-w-md leading-7 text-white/60">
-              A glimpse of the kind of digital experiences we can create.
-            </p>
+      <section id="shop" className="bg-[#20251f] px-6 py-20 text-white md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-widest text-emerald-300">Digital shop</p>
+            <h2 className="mt-4 text-4xl font-semibold sm:text-5xl">Practical tools for your next step.</h2>
+            <p className="mt-6 leading-8 text-white/70">Roki plans to offer original guidebooks, templates, workbooks, and digital learning materials.</p>
           </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {projects.map((project) => (
-              <article key={project.number}>
-                <div className={`flex aspect-[4/3] flex-col items-center justify-center rounded-3xl ${project.style}`}>
-                  <span className="text-7xl font-black tracking-tight">{project.symbol}</span>
-                  <span className="mt-3 text-xs uppercase tracking-[0.2em]">Creative concept</span>
-                </div>
-                <div className="mt-5 flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="text-xl font-semibold">{project.name}</h3>
-                    <p className="mt-1 text-sm text-white/60">{project.type}</p>
-                  </div>
-                  <span className="text-xl">↗</span>
-                </div>
-              </article>
-            ))}
+          <div className="rounded-3xl border border-white/20 p-8">
+            <span className="text-4xl">✦</span>
+            <h3 className="mt-5 text-2xl font-semibold">Coming soon</h3>
+            <p className="mt-3 leading-7 text-white/70">Helpful learning materials without unrealistic promises or overnight-success claims.</p>
+            <a href="#contact" className="mt-6 inline-block rounded-full bg-white px-6 py-3 font-semibold text-[#20251f]">Contact Roki ↗</a>
           </div>
-          <p className="mt-6 text-xs text-white/50">
-            These are illustrative portfolio concepts, not claims of completed client projects.
-          </p>
         </div>
       </section>
 
-      <section className="bg-white py-20 md:py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <span className="text-4xl text-emerald-800">“</span>
-          <h2 className="mt-4 text-3xl font-medium leading-relaxed tracking-tight sm:text-4xl">
-            Great digital experiences start with understanding people and
-            building around what matters to them.
-          </h2>
-          <p className="mt-6 text-sm text-[#686c65]">
-            Our approach to every project
-          </p>
+      <section id="about" className="bg-white px-6 py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
+          <div className="rounded-3xl bg-[#e8e9df] p-8 sm:p-12">
+            <p className="text-sm font-bold uppercase tracking-widest text-emerald-800">The Roki approach</p>
+            <p className="mt-8 text-4xl font-semibold leading-tight">Learn clearly.<br />Practice patiently.<br />Think critically.</p>
+          </div>
+          <div>
+            <p className="text-sm font-bold uppercase tracking-widest text-emerald-800">About Roki</p>
+            <h2 className="mt-4 text-4xl font-semibold">A more honest way to learn about online opportunities.</h2>
+            <p className="mt-6 leading-8 text-[#686c65]">Roki is an educational brand for beginners who want to understand digital skills and online work.</p>
+            <p className="mt-4 leading-8 text-[#686c65]">We focus on learning, realistic expectations, and responsible decisions. No method can guarantee income.</p>
+          </div>
         </div>
       </section>
 
-      
-<section id="contact" className="px-6 py-20 md:py-28 lg:px-10">
-  <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-emerald-800 px-7 py-14 text-white sm:px-12 md:py-20">
-    <div className="grid gap-12 md:grid-cols-2">
-      <div>
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-200">
-          Have a project in mind?
-        </p>
-
-        <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-          Let&apos;s build something meaningful.
-        </h2>
-
-        <p className="mt-6 max-w-lg leading-7 text-white/80">
-          Tell us about your goals and what you want to achieve.
-          We&apos;ll help you explore the right solution.
-        </p>
-
-        <div className="mt-10 border-t border-white/20 pt-6">
-          <p className="text-sm text-white/70">Typical inquiries</p>
-          <p className="mt-2 font-medium">Websites · Design · Digital solutions</p>
+      <section className="bg-amber-50 px-6 py-12">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-amber-900">A note about financial content</p>
+          <p className="mt-3 leading-7 text-amber-950/80">Roki provides education, not personalized financial advice. Online business outcomes vary. Be careful with anyone promising guaranteed income. Forex and other speculative activities can involve substantial losses.</p>
         </div>
-      </div>
+      </section>
 
-      <div className="rounded-3xl bg-white p-6 text-[#20251f] sm:p-8">
-        <h3 className="text-2xl font-semibold">Send us a message</h3>
-        <p className="mt-2 text-sm text-[#686c65]">
-          Fields marked with * are required.
-        </p>
+      <section id="contact" className="px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl rounded-[2rem] bg-emerald-800 px-7 py-14 text-white sm:px-12">
+          <div className="grid gap-10 md:grid-cols-2">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-widest text-emerald-200">Get in touch</p>
+              <h2 className="mt-5 text-4xl font-semibold sm:text-5xl">What would you like to learn next?</h2>
+              <p className="mt-6 leading-7 text-white/80">Send a question, suggest a topic, or share feedback about Roki.</p>
+              <p className="mt-8 border-t border-white/20 pt-5 text-sm text-white/80">Digital skills · Online work · AI tools · Money basics</p>
+            </div>
+            <div className="rounded-3xl bg-white p-6 text-[#20251f] sm:p-8">
+              <h3 className="text-2xl font-semibold">Send a message</h3>
+              <p className="mt-2 text-sm text-[#686c65]">Fields marked with * are required.</p>
+              <div className="mt-5"><ContactForm /></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <ContactForm />
-      </div>
-    </div>
-  </div>
-</section>
-
-
-      <footer className="border-t border-black/10 bg-[#faf9f6]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-10">
-          <a href="#" className="text-xl font-black tracking-tight">
-            north<span className="text-emerald-700">.</span>
-          </a>
-          <p className="text-sm text-[#686c65]">
-            © 2026 North Studio. All rights reserved.
-          </p>
-          <a href="#contact" className="text-sm font-medium hover:text-emerald-800">
-            Get in touch ↗
-          </a>
+      <footer className="border-t border-black/10 px-6 py-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <a href="#home" className="text-xl font-black">roki<span className="text-emerald-700">.</span></a>
+          <p className="text-sm text-[#686c65]">© 2026 Roki. Educational content for learning and exploration.</p>
+          <a href="#contact" className="text-sm font-medium">Contact Roki ↗</a>
         </div>
       </footer>
     </main>

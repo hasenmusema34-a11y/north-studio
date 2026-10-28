@@ -21,7 +21,7 @@ export default function SignupPage() {
       email,
       password,
       options: {
-        emailRedirectTo: 'https://north-studio-9h6mrd5l0-hasen4.vercel.app/login',
+        emailRedirectTo: 'https://north-studio-gamma.vercel.app/login',
       },
     })
 
